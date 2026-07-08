@@ -249,7 +249,7 @@ a {
 .insight-strip {
   display: grid;
   gap: 12px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .metric {
@@ -283,6 +283,7 @@ a {
 
 .briefing,
 .compare-panel,
+.sources-panel,
 .ops-panel {
   background: var(--panel);
   border: 1px solid var(--line);
@@ -340,6 +341,13 @@ a {
   font-size: 22px;
   line-height: 1.15;
   margin: 0;
+}
+
+.slug {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 750;
+  margin: 6px 0 0;
 }
 
 .icon-button {
@@ -421,6 +429,62 @@ a {
   margin: 0;
 }
 
+.product-examples,
+.risk-row {
+  align-items: flex-start;
+  border-radius: 8px;
+  display: flex;
+  font-size: 13px;
+  gap: 8px;
+  line-height: 1.45;
+  padding: 10px 12px;
+}
+
+.product-examples {
+  background: #edf7f7;
+  color: var(--teal-dark);
+}
+
+.sentiment-block {
+  display: grid;
+  gap: 7px;
+}
+
+.sentiment-labels {
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+  font-weight: 800;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.sentiment-bar {
+  background: #e9eee7;
+  border-radius: 999px;
+  display: flex;
+  height: 10px;
+  overflow: hidden;
+}
+
+.sentiment-bar span {
+  display: block;
+  height: 100%;
+}
+
+.sentiment-bar .positive {
+  background: var(--teal);
+}
+
+.sentiment-bar .mixed {
+  background: var(--yellow);
+}
+
+.sentiment-bar .negative {
+  background: var(--coral);
+}
+
 .signal-columns {
   display: grid;
   gap: 12px;
@@ -470,6 +534,63 @@ a {
   color: var(--warn);
 }
 
+.detail-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.detail-block {
+  background: #f7f8f3;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.detail-block h4,
+.safety-checks h4 {
+  font-size: 12px;
+  margin: 0 0 6px;
+  text-transform: uppercase;
+}
+
+.detail-block p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.safety-checks {
+  background: #eef7ee;
+  border: 1px solid #cfe5d0;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.safety-checks h4 {
+  align-items: center;
+  color: var(--teal-dark);
+  display: flex;
+  gap: 7px;
+}
+
+.safety-checks div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.safety-checks span {
+  background: #fff;
+  border: 1px solid #cfe5d0;
+  border-radius: 8px;
+  color: var(--teal-dark);
+  font-size: 12px;
+  font-weight: 800;
+  padding: 6px 8px;
+}
+
 .complaints {
   align-items: flex-start;
   background: #f8f5ef;
@@ -480,6 +601,11 @@ a {
   gap: 8px;
   line-height: 1.45;
   padding: 10px 12px;
+}
+
+.risk-row {
+  background: #fff2ee;
+  color: #6f2c20;
 }
 
 .card-footer {
@@ -496,18 +622,29 @@ a {
   gap: 6px;
 }
 
-.card-footer a {
+.action-links {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.action-links a {
   align-items: center;
   background: var(--coral);
   border-radius: 8px;
   color: #fff;
   display: inline-flex;
-  flex: 0 0 auto;
   font-size: 13px;
   font-weight: 850;
   gap: 7px;
   min-height: 38px;
   padding: 0 12px;
+}
+
+.action-links a:first-child {
+  background: var(--ink);
 }
 
 .section-heading {
@@ -531,7 +668,7 @@ a {
 .table-row {
   display: grid;
   gap: 12px;
-  grid-template-columns: minmax(180px, 1.2fr) minmax(120px, 1fr) 90px minmax(180px, 1.3fr);
+  grid-template-columns: minmax(170px, 1.2fr) minmax(120px, 1fr) 84px 84px minmax(180px, 1.3fr);
 }
 
 .table-row span {
@@ -561,6 +698,32 @@ a {
   display: grid;
   gap: 12px;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.source-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.source-grid a {
+  background: #f4f8f9;
+  border: 1px solid #d7e7e7;
+  border-radius: 8px;
+  display: grid;
+  gap: 8px;
+  min-height: 132px;
+  padding: 14px;
+}
+
+.source-grid strong {
+  color: var(--teal-dark);
+}
+
+.source-grid span {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
 }
 
 .ops-step {
@@ -632,6 +795,8 @@ a {
   .insight-strip,
   .score-row,
   .signal-columns,
+  .detail-grid,
+  .source-grid,
   .ops-grid {
     grid-template-columns: 1fr;
   }

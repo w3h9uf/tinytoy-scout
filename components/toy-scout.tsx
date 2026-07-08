@@ -2,11 +2,13 @@
 
 import Image from "next/image";
 import {
+  AlertTriangle,
   ArrowUpDown,
   Baby,
   Bookmark,
   BookmarkCheck,
   CheckCircle2,
+  ClipboardCheck,
   ExternalLink,
   Filter,
   Info,
@@ -14,10 +16,11 @@ import {
   ShieldCheck,
   Sparkles,
   Star,
+  Tags,
   Waves
 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
-import { ageBands, issueTags, type AgeBand, type IssueTag, type ToyItem } from "@/lib/toys";
+import { ageBands, issueTags, safetySources, type AgeBand, type EnrichedToyItem, type IssueTag } from "@/lib/toys";
 
 type SortMode = "score" | "safety" | "mentions" | "cleanup";
 
@@ -46,7 +49,7 @@ function joinAgeBands(bands: AgeBand[]) {
   return bands.join(", ");
 }
 
-export function ToyScout({ toys }: { toys: ToyItem[] }) {
+export function ToyScout({ toys }: { toys: EnrichedToyItem[] }) {
   const [query, setQuery] = useState("");
   const [activeAge, setActiveAge] = useState<AgeBand | "all">("all");
   const [activeIssue, setActiveIssue] = useState<IssueTag | "all">("all");
@@ -73,6 +76,10 @@ export function ToyScout({ toys }: { toys: ToyItem[] }) {
           !normalized ||
           toy.name.toLowerCase().includes(normalized) ||
           toy.category.toLowerCase().includes(normalized) ||
+          toy.productExamples.join(" ").toLowerCase().includes(normalized) ||
+          toy.redditQuerySeeds.join(" ").toLowerCase().includes(normalized) ||
+          toy.seoKeywords.join(" ").toLowerCase().includes(normalized) ||
+          toy.materialNotes.toLowerCase().includes(normalized) ||
           toy.commonPraise.join(" ").toLowerCase().includes(normalized) ||
           toy.commonComplaints.join(" ").toLowerCase().includes(normalized);
         const matchesAge = activeAge === "all" || toy.ageBands.includes(activeAge);
@@ -93,6 +100,7 @@ export function ToyScout({ toys }: { toys: ToyItem[] }) {
   const avgSafety = Math.round(
     filtered.reduce((sum, toy) => sum + toy.safetyScore, 0) / Math.max(filtered.length, 1)
   );
+  const highEvidenceCount = filtered.filter((toy) => toy.evidenceGrade === "High").length;
 
   const toggleSaved = (id: string) => {
     setSaved((current) => (current.includes(id) ? current.filter((item) => item !== id) : [...current, id]));
@@ -205,6 +213,7 @@ export function ToyScout({ toys }: { toys: ToyItem[] }) {
           <div className="insight-strip">
             <Metric icon={<Star size={18} />} label="Matching toys" value={String(filtered.length)} />
             <Metric icon={<ShieldCheck size={18} />} label="Avg safety" value={`${avgSafety}/100`} />
+            <Metric icon={<ClipboardCheck size={18} />} label="High evidence" value={String(highEvidenceCount)} />
             <Metric icon={<BookmarkCheck size={18} />} label="Shortlisted" value={String(saved.length)} />
           </div>
 
@@ -214,8 +223,8 @@ export function ToyScout({ toys }: { toys: ToyItem[] }) {
               <h2>Compress parent threads into safer buying decisions.</h2>
             </div>
             <p>
-              Each card separates repeat praise, repeat complaints, age fit, cleanup burden, and safety watchouts.
-              The mock data shape is ready for a Reddit ingestion job plus CPSC recall verification.
+              Each card now carries product examples, query seeds, sentiment mix, age rationale, cleanup notes,
+              recall lookup links, and a safety checklist based on CPSC/AAP-style screening.
             </p>
           </div>
 
@@ -226,6 +235,7 @@ export function ToyScout({ toys }: { toys: ToyItem[] }) {
                   <div>
                     <p className="category">{toy.category}</p>
                     <h3>{toy.name}</h3>
+                    <p className="slug">/{toy.slug}</p>
                   </div>
                   <button
                     className="icon-button"
@@ -247,19 +257,62 @@ export function ToyScout({ toys }: { toys: ToyItem[] }) {
                   <span>{toy.price}</span>
                   <span>{joinAgeBands(toy.ageBands)}</span>
                   <span>{toy.redditMentions} mentions</span>
+                  <span>{toy.evidenceGrade} evidence</span>
                 </div>
 
                 <p className="fit-line">{toy.parentFit}</p>
                 <p className="evidence">{toy.evidence}</p>
+
+                <div className="product-examples" aria-label={`${toy.name} product examples`}>
+                  <Tags size={15} aria-hidden />
+                  <span>{toy.productExamples.join(" · ")}</span>
+                </div>
+
+                <div className="sentiment-block" aria-label={`${toy.name} sentiment split`}>
+                  <div className="sentiment-labels">
+                    <span>Positive {toy.sentiment.positive}%</span>
+                    <span>Mixed {toy.sentiment.mixed}%</span>
+                    <span>Negative {toy.sentiment.negative}%</span>
+                  </div>
+                  <div className="sentiment-bar" aria-hidden>
+                    <span className="positive" style={{ width: pct(toy.sentiment.positive) }} />
+                    <span className="mixed" style={{ width: pct(toy.sentiment.mixed) }} />
+                    <span className="negative" style={{ width: pct(toy.sentiment.negative) }} />
+                  </div>
+                </div>
 
                 <div className="signal-columns">
                   <SignalList title="Repeated praise" items={toy.commonPraise} tone="good" />
                   <SignalList title="Watchouts" items={toy.watchouts} tone="warn" />
                 </div>
 
+                <div className="detail-grid">
+                  <DetailBlock title="Age rationale" text={toy.ageReason} />
+                  <DetailBlock title="Materials" text={toy.materialNotes} />
+                  <DetailBlock title="Cleaning" text={toy.cleaningNotes} />
+                  <DetailBlock title="Avoid if" text={toy.avoidIf.join("; ")} />
+                </div>
+
+                <div className="safety-checks">
+                  <h4>
+                    <ShieldCheck size={15} aria-hidden />
+                    Safety checklist
+                  </h4>
+                  <div>
+                    {toy.safetyChecklist.map((item) => (
+                      <span key={item}>{item}</span>
+                    ))}
+                  </div>
+                </div>
+
                 <div className="complaints">
                   <Waves size={16} aria-hidden />
                   <span>{toy.commonComplaints.join("; ")}</span>
+                </div>
+
+                <div className="risk-row">
+                  <AlertTriangle size={16} aria-hidden />
+                  <span>{toy.cpscFlags.join("; ")}</span>
                 </div>
 
                 <div className="card-footer">
@@ -268,10 +321,16 @@ export function ToyScout({ toys }: { toys: ToyItem[] }) {
                       <span key={tag}>{issueLabels[tag as IssueTag]}</span>
                     ))}
                   </div>
-                  <a href={toy.affiliateUrl} target="_blank" rel="noreferrer">
-                    Shop search
-                    <ExternalLink size={15} aria-hidden />
-                  </a>
+                  <div className="action-links">
+                    <a href={toy.recallSearchUrl} target="_blank" rel="noreferrer">
+                      Recalls
+                      <ExternalLink size={15} aria-hidden />
+                    </a>
+                    <a href={toy.affiliateUrl} target="_blank" rel="noreferrer">
+                      Shop search
+                      <ExternalLink size={15} aria-hidden />
+                    </a>
+                  </div>
                 </div>
               </article>
             ))}
@@ -291,6 +350,7 @@ export function ToyScout({ toys }: { toys: ToyItem[] }) {
                 <span role="columnheader">Toy</span>
                 <span role="columnheader">Age</span>
                 <span role="columnheader">Safety</span>
+                <span role="columnheader">Evidence</span>
                 <span role="columnheader">Parent signal</span>
               </div>
               {compareToys.map((toy) => (
@@ -298,8 +358,27 @@ export function ToyScout({ toys }: { toys: ToyItem[] }) {
                   <span role="cell">{toy.name}</span>
                   <span role="cell">{joinAgeBands(toy.ageBands)}</span>
                   <span role="cell">{toy.safetyScore}/100</span>
+                  <span role="cell">{toy.evidenceGrade}</span>
                   <span role="cell">{toy.parentFit}</span>
                 </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="sources-panel">
+            <div className="section-heading">
+              <div>
+                <p className="eyebrow">Safety rubric</p>
+                <h2>Enrichment sources</h2>
+              </div>
+              <p>These are the checks the MVP should run before a page becomes purchase-oriented.</p>
+            </div>
+            <div className="source-grid">
+              {safetySources.map((source) => (
+                <a key={source.url} href={source.url} target="_blank" rel="noreferrer">
+                  <strong>{source.label}</strong>
+                  <span>{source.note}</span>
+                </a>
               ))}
             </div>
           </section>
@@ -337,6 +416,15 @@ function Metric({ icon, label, value }: { icon: React.ReactNode; label: string; 
         <span>{label}</span>
         <strong>{value}</strong>
       </div>
+    </div>
+  );
+}
+
+function DetailBlock({ title, text }: { title: string; text: string }) {
+  return (
+    <div className="detail-block">
+      <h4>{title}</h4>
+      <p>{text}</p>
     </div>
   );
 }
