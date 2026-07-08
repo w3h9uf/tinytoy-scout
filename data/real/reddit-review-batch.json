@@ -1,0 +1,109 @@
+{
+  "source_type": "pullpush_archive",
+  "generated_at": "2026-07-08T12:19:11.763Z",
+  "note": "Real public Reddit archive data from PullPush, not the official Reddit API. Use this for MVP research only; production should switch to Reddit OAuth/API or a licensed provider. Text is normalized into a comments array so the local LLM enrichment script can process it.",
+  "queries": [
+    "stacking cups baby toy",
+    "bath toys that don't mold toddler",
+    "busy board toddler airplane"
+  ],
+  "errors": [],
+  "comments": [
+    {
+      "id": "comment_il7lffx",
+      "source_kind": "comment",
+      "query": "busy board toddler airplane",
+      "subreddit": "Mommit",
+      "score": 5,
+      "created_utc": 1661100126,
+      "permalink": "https://www.reddit.com/r/Mommit/comments/wts112/zero_screen_time_recommendation_for_babies_under/il7lffx/",
+      "toy_hint": "busy board",
+      "age_hint": null,
+      "text": "We've done a decent amount of traveling with our toddler. \n\nWe got a portable busy board from Amazon that keeps him occupied, stickers (they make these durable stickers that can be reused over and over, they may be all over my car but we didnt have meltdowns), pop its, the coloring books with the special markers that only color on those pages. \n\nBut also for flights, my kiddo loves to look out the window at all the other planes and trucks while we are waiting to board and taxi. And then he will knock out because the noise from the airplane is like a huge sound machine lol"
+    },
+    {
+      "id": "comment_e033uli",
+      "source_kind": "comment",
+      "query": "busy board toddler airplane",
+      "subreddit": "beyondthebump",
+      "score": 3,
+      "created_utc": 1528110284,
+      "permalink": "https://www.reddit.com/r/beyondthebump/comments/8og9e3/please_help_im_going_to_be_traveling_alone_with/e033uli/",
+      "toy_hint": "busy board",
+      "age_hint": null,
+      "text": "Hey! \n\nIt will be OK! The flight might be terrible but it is a short time and then it will be over. \n\nI personally find it insane to give benadryl to such a small child on a flight. But ask your doctor. Burning off a lot of energy beforehand is a good idea. Many airports also have a playground. Be careful of not making him overtired though, it is not always they sleep better. At least my daughter sleeps worse when she doesn't nap. \n\nHe doesn't have to sit still the whole time. I would allow him to walk up and down the aisle (supervised of course) when the seat belt sign is off. Pack plenty of easy to eat snacks (we loved pouches) and a sippy cup for fluids (to suck on to ease the pressure in ears). If he uses pacifier, bring that one too. I would go to the dollar store and get a lot of little toys he can play with. You can pack them in individual bags so you can pillen a new one out from time to time. We also loved interactive board books to keep my daughter occupied. You can look into maybe getting a busy board, I know they have them on Amazon.\n\nMost likely he will sleep at some point. An airplane is like one big white noise machine; my very active FOMO 1-year old always ends up sleeping some portion of the trip. \n\nBut reałly, it will be ok. You are not the first to travel with a toddler and it might suck for everyone, but they will get over it. It is only 8 hours and he will not cry for all 8."
+    },
+    {
+      "id": "comment_jcjosud",
+      "source_kind": "comment",
+      "query": "busy board toddler airplane",
+      "subreddit": "AlaskaAirlines",
+      "score": 3,
+      "created_utc": 1679046286,
+      "permalink": "https://www.reddit.com/r/AlaskaAirlines/comments/11sxnwn/boeing_7379_how_many_attendants/jcjosud/",
+      "toy_hint": "busy board",
+      "age_hint": null,
+      "text": "These are great ideas   As others have noted, the big thing is staying on top of it, but the goodies are so thoughtful.  As my littles are no longer little (one is getting married in a week) there’s good advice here.  A few things that worked for me….\n\n1.  Definitely some “travel presents” as noted above by @doublemazzaa.  They were life savers.   Legos, hot wheels, coloring books, stickers, busy boards, pipe cleaners, etc. \n2. Obviously iPad/iPhone entertainment (we used portable dvd players. \n3.  If they have their own seat, don’t check the car seat.  Put it in the airplane seat.   At least for my boys, they associated the car seat with travel and didn’t agitate to get out of it and run around.  It also made it harder for them to kick seats and is more comfortable for them than the airplane seat is. \n4.  Keep them moving in the airport.  Find some open places out of the way and get them running.  Play tag or “I’m gonna get you….”   Anything to keep them busy and active.   The goal is to wear them out so they sleep at least some of the flight. \n5.  Sippy cup with water or favorite juice for take off/landing.  \n6.  SNACKS.  Hangry isn’t pretty. \n7.  I flew with my kids in pajamas. \n\nIf all else fails, there is bourbon for purchase on the flight.   I’ll let you decide if it’s for you or your toddler or both."
+    },
+    {
+      "id": "comment_hjc78kq",
+      "source_kind": "comment",
+      "query": "busy board toddler airplane",
+      "subreddit": "toddlers",
+      "score": 3,
+      "created_utc": 1636063046,
+      "permalink": "https://www.reddit.com/r/toddlers/comments/qmshke/asking_for_recommendations_snacks_audiobooks/hjc78kq/",
+      "toy_hint": "busy board",
+      "age_hint": null,
+      "text": "Busy Board, School Bus Style Activity Board(12 Basic Skill), for Fine Motor and Learn to Dress, Early Educational for Preschool Kids Toddler, Sensory Toy for Kindergarten Classroom Airplane Car Travel https://www.amazon.com/dp/B07VSLTVX1/ref=cm_sw_r_awdo_navT_a_15JQ4STWK79MV7MWCEM1\n\nA busy board for the car like this one, keeps my kiddo entertained. I have used a gallon zip lock bag for small toys that I just rotate through. \nRubber ducks, a few (like 6-7) duplo blocks, Oball, etc. My kiddo is a bit younger and likes chewing on toothbrushes… so we bring like 3 and rotate them with toys. 🤷🏻‍♀️ \nI like those veggie straws, pea puffs, applesauce pouches, and dried fruit for snacks. We bring a cooler for straw cups of milk and water. \nLots of interactive songs, we have a mirror that kiddo can see us and we can see her, itsy bitsy spider, wheels on the bus, pat a cake. Coco melon has a best of playlist on Amazon music which we subscribe to, but bring ibuprofen for the headache it will cause you, lol! \nMy kiddo does better with one person sitting in the back seat with her too, if that’s an option for you. \nWe are big readers, so reading books (especially touchy-feely ones) if you are in the back seat. My kiddo is a bit younger so YMMV. Good luck!!🍀"
+    },
+    {
+      "id": "comment_hbmloqu",
+      "source_kind": "comment",
+      "query": "busy board toddler airplane",
+      "subreddit": "beyondthebump",
+      "score": 2,
+      "created_utc": 1630798884,
+      "permalink": "https://www.reddit.com/r/beyondthebump/comments/pi1sp5/toy_recommendations_for_6_month_olds/hbmloqu/",
+      "toy_hint": "busy board",
+      "age_hint": null,
+      "text": "The simplest things worked for us. Try stacking cups (or even kitchen measuring cups), a caged ball (something that's easy to grab), busy board (has hooks, zippers, etc.). I'll link them below. \n\nThe First Years Stack Up Cup Toys https://www.amazon.com/dp/B00005C5H4/ref=cm_sw_r_cp_api_glt_fabc_P9X1KP8P4ZXSM0N756YG\n\nOball Classic Ball - Red, Yellow, Green, Blue, Ages Newborn + https://www.amazon.com/dp/B00ZRD99C0/ref=cm_sw_r_cp_api_glt_fabc_TECP7TH18H4J2EG30E37\n\nEsjay Toddler Busy Board, Sensory Board for Fine Motor Skill, Montessori Toys Toddler Activities for Travel Car Airplane(Blue) https://www.amazon.com/dp/B089GGQBF4/ref=cm_sw_r_cp_api_glt_fabc_ZZVYHMWB8APC897AGBA3"
+    },
+    {
+      "id": "comment_lotrtob",
+      "source_kind": "comment",
+      "query": "busy board toddler airplane",
+      "subreddit": "toddlers",
+      "score": 2,
+      "created_utc": 1727254367,
+      "permalink": "https://www.reddit.com/r/toddlers/comments/1fo3vc2/ideas_for_how_to_keep_a_2_year_old_occupied_on_a/lotrtob/",
+      "toy_hint": "busy board",
+      "age_hint": "3 months",
+      "text": "Military fam here 🙋🏼‍♀️\nWe’ve lived all over the country and are currently overseas and make the international leap often. My 3.5 year old has been flying since she was 3 months old! \n\n- snack tackle box (don’t bother with juice or milk, they always have those things on the plane, don’t waste your space)\n- busy board\n- wicki stix \n- “my first sticker book” on Amazon (bonus points because they can stick them on the windows, the TV screen, not just the book itself.\n- suction cup poppers\n- special color markers that only color on certain paper\n- favorite stuffy &amp; blankie (at least for my blankie loving kid)\n- little animal or people figurines, you can play together and I swear my kid will do that for HOURS\n- if you have an iPad, download some movies on Netflix, Disney+, whatever you use. Sometimes the TVs are just too high for a toddler and I notice it doesn’t do much to keep my kid occupied. \n- before the flight do not sit 😂 when you’re waiting at that gate you let your toddler RUN with you, dance whatever have you. My husband and I take turns doing this. Truly gets out that last bit of energy before they are in a confined space. I have never had to walk the aisles with my toddler, I really despise the idea of that so that’s an absolute last resort for me. You can also ask the gate agent to be moved to the back near the bathrooms, some planes have a bit more space near there so if you need to stand and get them up, that helps. I have had to rock my kid to sleep a few times and that space is helpful!\n- get yourself a little pack of travel Clorox wipes, you can get them in the target travel section, I like to wipe down everything before, and after the flight.\n\nLife hack: get them their own little backpack. It is truly the highlight for my toddler. She feels independent to carry her own belongings, and she knows it as her airplane bag! \n\nLast thing I’ll say is this. No one is caring about how your toddler is behaving as much as you are. Airplanes are considered a public setting and if someone cares that much to not be disturbed, they can purchase a first class or business ticket. Take the pressure off yourself, because that will only have you short tempered. Make everything fun, and a game, they’ll do great! I always pack a travel sized deodorant, and face cleansing wipes for myself because it’s nice to refresh yourself at the end 😂\n\nBon voyage! 🛫"
+    },
+    {
+      "id": "comment_mb2bo7t",
+      "source_kind": "comment",
+      "query": "stacking cups baby toy",
+      "subreddit": "moderatelygranolamoms",
+      "score": 3,
+      "created_utc": 1738735835,
+      "permalink": "https://www.reddit.com/r/moderatelygranolamoms/comments/1ihvv29/are_toys_with_flashing_lights_bad_for_babies/mb2bo7t/",
+      "toy_hint": "stacking cups",
+      "age_hint": null,
+      "text": "I don’t know the science behind it, but as someone with ADHD who has likely passed it onto my children I didn’t want my infants to learn hit the button and get an instant dopamine flood of lights and sounds and everything you want. Maybe it’s superstition, but I didn’t allow those toys in my home for the first year. They only exist at Grandma’s house about once a month. \n\nI’m more likely to get overstimulated than my baby. There is just so much crap that comes along with babies. Open ended toys like stacking cups get a lot more use for a lot longer and don’t take up as much space as the electronic toys. It helps cut down on the clutter."
+    },
+    {
+      "id": "submission_13buvwn",
+      "source_kind": "submission",
+      "query": "stacking cups baby toy",
+      "subreddit": "MomsWorkingFromHome",
+      "score": 9,
+      "created_utc": 1683558560,
+      "permalink": "https://www.reddit.com/r/MomsWorkingFromHome/comments/13buvwn/need_ideas_of_what_to_do_forwith_my_10_month_old/",
+      "toy_hint": "stacking cups",
+      "age_hint": "10 month",
+      "text": "Need ideas of what to do for/with my 10 month old while working.\n\nHello everyone! I work from home and care for my 10 month old daughter.  I work about 15 hours per week (around 3 hours per day), and I try to limit my work to while my daughter is napping, but she doesn't always nap very long. Her first nap is usually around 45 mins and second is anywhere from 45 minutes to 2 hours (very unpredictable).  So when I have to work while she's awake, I try to make sure she's okay with independently playing, but she's not always okay with that and wants my attention.  So I sometimes resort to TV time where I let her watch Songs for Littles (Miss Rachel).  I try to limit her to 3 hours per day, and no more than an hour at a time.   Before turning on the TV for her, I try to make sure she has enough toys to interact with to encourage the independent play. She has an \"activity cube\", various types of toys including stacking cups, stacking rings, stuffed veggies that make noise, a few sheets of \"baby paper\" (crinkles), stuffies, teething toys, etc. \n\nI am looking for advice on what else I can do for her/get for her that will help her with her independent play as I know TV isn't the best...\n\nTIA!!"
+    }
+  ]
+}

@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "llm:check": "node scripts/check-local-llm.mjs",
-    "llm:enrich": "node scripts/enrich-reviews-local.mjs"
+    "llm:enrich": "node scripts/enrich-reviews-local.mjs",
+    "data:pullpush": "node scripts/fetch-reddit-pullpush.mjs",
+    "data:enrich-real": "node scripts/enrich-reviews-local.mjs data/real/reddit-review-batch.json data/generated/real-local-llm-enrichment.json"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",

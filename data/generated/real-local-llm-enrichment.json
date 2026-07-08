@@ -1,0 +1,82 @@
+{
+  "generatedAt": "2026-07-08T12:19:59.628Z",
+  "model": "glm-4.7-flash:q8_0",
+  "baseUrl": "http://localhost:11434",
+  "inputPath": "data/real/reddit-review-batch.json",
+  "sourceType": "pullpush_archive",
+  "inputRecordCount": 8,
+  "maxRecords": 12,
+  "maxTextChars": 700,
+  "run_type": "local_llm_review_enrichment",
+  "items": [
+    {
+      "toy_group": "busy board",
+      "detected_products": [
+        "Busy Board, School Bus Style Activity Board(12 Basic Skill)",
+        "Esjay Toddler Busy Board, Sensory Board for Fine Motor Skill, Montessori Toys Toddler Activities for Travel Car Airplane(Blue)",
+        "portable busy board"
+      ],
+      "age_bands": [
+        "preschool kids",
+        "toddler",
+        "3 months"
+      ],
+      "sentiment": {
+        "positive": 100,
+        "mixed": 0,
+        "negative": 0
+      },
+      "repeated_praise": [
+        "keeps toddler occupied",
+        "great for travel",
+        "fine motor skills",
+        "easy to grab"
+      ],
+      "common_complaints": [],
+      "safety_watchouts": [],
+      "cleaning_watchouts": [],
+      "avoid_if": [],
+      "parent_fit": "Portable and travel-friendly; helps with meltdowns during flights.",
+      "confidence": "High",
+      "evidence_comment_ids": [
+        "comment_il7lffx",
+        "comment_jcjosud",
+        "comment_hjc78kq",
+        "comment_hbmloqu",
+        "comment_lotrtob"
+      ]
+    },
+    {
+      "toy_group": "stacking cups",
+      "detected_products": [
+        "The First Years Stack Up Cup Toys"
+      ],
+      "age_bands": [
+        "infants",
+        "10 month"
+      ],
+      "sentiment": {
+        "positive": 100,
+        "mixed": 0,
+        "negative": 0
+      },
+      "repeated_praise": [
+        "open ended toys",
+        "get a lot more use for a lot longer",
+        "don't take up as much space"
+      ],
+      "common_complaints": [],
+      "safety_watchouts": [],
+      "cleaning_watchouts": [],
+      "avoid_if": [
+        "instant dopamine flood of lights and sounds"
+      ],
+      "parent_fit": "Open-ended play; reduces clutter and overstimulation.",
+      "confidence": "Medium",
+      "evidence_comment_ids": [
+        "comment_mb2bo7t",
+        "submission_13buvwn"
+      ]
+    }
+  ]
+}
