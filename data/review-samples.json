@@ -1,0 +1,48 @@
+{
+  "source_type": "synthetic_mvp_fixture",
+  "note": "Small hand-written fixture used to test the local LLM enrichment pipeline. Replace with licensed Reddit/API exports before production use.",
+  "comments": [
+    {
+      "id": "c_stacking_001",
+      "query": "best toys 6 month old",
+      "toy_hint": "stacking cups",
+      "age_hint": "6-12m",
+      "text": "The cheap stacking cups got more use than almost anything else. Baby chewed them at first, then nested them, then used them in the bath. I like that there are no batteries."
+    },
+    {
+      "id": "c_stacking_002",
+      "query": "simple baby toys",
+      "toy_hint": "stacking cups",
+      "age_hint": "9-18m",
+      "text": "Stacking cups are the one toy I keep recommending. Easy to wash, easy to throw in a diaper bag, and my toddler still uses them for pretend cooking."
+    },
+    {
+      "id": "c_stacking_003",
+      "query": "bath toys",
+      "toy_hint": "stacking cups",
+      "age_hint": "12-18m",
+      "text": "They were great until one cracked after being stepped on. I would avoid any set with stickers because the labels peeled after bath use."
+    },
+    {
+      "id": "c_bath_001",
+      "query": "bath toys that don't mold",
+      "toy_hint": "open bath pipes",
+      "age_hint": "12-24m",
+      "text": "We switched from squeeze toys to open bath pipes because I was tired of black mold coming out of rubber ducks. Open pieces are much easier to rinse and inspect."
+    },
+    {
+      "id": "c_bath_002",
+      "query": "boon pipes mold",
+      "toy_hint": "open bath pipes",
+      "age_hint": "18-36m",
+      "text": "The suction cups are hit or miss on our tile, but open bath toys are still better than anything sealed. Just separate the pieces and let them dry."
+    },
+    {
+      "id": "c_busy_001",
+      "query": "airplane toys toddler",
+      "toy_hint": "busy board",
+      "age_hint": "18-36m",
+      "text": "A felt busy board helped on a flight because it was quiet. But check the buckles and little pieces. I would not give it to a toddler who still puts hardware in their mouth."
+    }
+  ]
+}

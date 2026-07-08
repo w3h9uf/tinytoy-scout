@@ -1,0 +1,106 @@
+{
+  "generatedAt": "2026-07-08T12:02:22.145Z",
+  "model": "glm-4.7-flash:q8_0",
+  "baseUrl": "http://localhost:11434",
+  "inputPath": "data/review-samples.json",
+  "sourceType": "synthetic_mvp_fixture",
+  "run_type": "local_llm_review_enrichment",
+  "items": [
+    {
+      "toy_group": "stacking cups",
+      "detected_products": [],
+      "age_bands": [
+        "6-12m",
+        "9-18m",
+        "12-18m"
+      ],
+      "sentiment": {
+        "positive": 67,
+        "mixed": 0,
+        "negative": 33
+      },
+      "repeated_praise": [
+        "No batteries",
+        "Easy to wash",
+        "Easy to throw in a diaper bag",
+        "Durable for bath use"
+      ],
+      "common_complaints": [
+        "Stickers/labels peel after bath use",
+        "Cups can crack if stepped on"
+      ],
+      "safety_watchouts": [],
+      "cleaning_watchouts": [
+        "Avoid sets with stickers because labels peel"
+      ],
+      "avoid_if": [],
+      "parent_fit": "Versatile for chewing, nesting, bath play, and pretend cooking; quiet option for travel.",
+      "confidence": "High",
+      "evidence_comment_ids": [
+        "c_stacking_001",
+        "c_stacking_002",
+        "c_stacking_003"
+      ]
+    },
+    {
+      "toy_group": "open bath pipes",
+      "detected_products": [],
+      "age_bands": [
+        "12-24m",
+        "18-36m"
+      ],
+      "sentiment": {
+        "positive": 100,
+        "mixed": 0,
+        "negative": 0
+      },
+      "repeated_praise": [
+        "Open pieces are easier to rinse and inspect",
+        "Open bath toys are better than sealed toys"
+      ],
+      "common_complaints": [
+        "Suction cups are hit or miss on tile"
+      ],
+      "safety_watchouts": [],
+      "cleaning_watchouts": [
+        "Separate pieces and let them dry"
+      ],
+      "avoid_if": [],
+      "parent_fit": "Solves mold issues associated with sealed toys; requires drying time to prevent mold.",
+      "confidence": "High",
+      "evidence_comment_ids": [
+        "c_bath_001",
+        "c_bath_002"
+      ]
+    },
+    {
+      "toy_group": "busy board",
+      "detected_products": [],
+      "age_bands": [
+        "18-36m"
+      ],
+      "sentiment": {
+        "positive": 100,
+        "mixed": 0,
+        "negative": 0
+      },
+      "repeated_praise": [
+        "Quiet option for flights"
+      ],
+      "common_complaints": [],
+      "safety_watchouts": [
+        "Check buckles and little pieces",
+        "Not suitable for toddlers who put hardware in their mouth"
+      ],
+      "cleaning_watchouts": [],
+      "avoid_if": [
+        "Toddler still puts hardware in their mouth"
+      ],
+      "parent_fit": "Good for travel due to quiet nature; requires supervision regarding small parts.",
+      "confidence": "High",
+      "evidence_comment_ids": [
+        "c_busy_001"
+      ]
+    }
+  ]
+}
